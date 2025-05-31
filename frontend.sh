@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./commom.sh
+source ./common.sh
 app_name-frontend
 
 check_root
