@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./commom.sh
-
+app_name-frontend
 
 check_root
 
