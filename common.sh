@@ -63,6 +63,17 @@ app_setup(){
 
 }
 
+python_setup(){
+    dnf install python3 gcc python3-devel -y &>>$LOG_FILE
+    VALIDATE $? "Install Python3 packages"
+
+    pip3 install -r requirements.txt &>>$LOG_FILE
+    VALIDATE $? "Installing dependencies"
+
+    cp $SCRIPT_DIR/payment.service /etc/systemd/system/payment.service &>>$LOG_FILE
+    VALIDATE $? "Copying payment service"
+}
+
 nodejs_setup(){
     
     dnf module disable nodejs -y &>>$LOG_FILE
@@ -100,6 +111,7 @@ maven_setup(){
     mv target/shipping-1.0.jar shipping.jar  &>>$LOG_FILE
     VALIDATE $? "Moving and renaming Jar file"
 }
+
 
 
 print_time(){
