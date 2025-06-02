@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./common.sh
-app_name-frontend
+app_name=frontend
 
 check_root
 
