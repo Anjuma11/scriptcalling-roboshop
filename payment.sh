@@ -5,6 +5,6 @@ app_name=payment
 
 check_root
 app_setup
-nodejs_setup
+python_setup
 systemd_setup
 print_time
